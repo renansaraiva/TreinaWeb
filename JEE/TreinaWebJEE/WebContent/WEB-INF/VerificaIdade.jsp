@@ -14,7 +14,7 @@
 				<td><input type = "text" name = "nome"/></td>
 			</tr>
 			<tr>
-				<td>Nome: </td>
+				<td>Idade: </td>
 				<td><input type = "text" name = "nome"/></td>
 			</tr>
 			<tr>
