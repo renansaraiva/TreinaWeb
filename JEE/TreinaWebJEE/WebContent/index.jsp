@@ -1,3 +1,4 @@
+<%@page import="java.util.Calendar"%>
 <%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -39,6 +40,59 @@
 	}
 	tabela += "</table>";
 	out.println(tabela);
+	%>
+	
+	<%
+	Calendar data = Calendar.getInstance();
+	int hora = data.get(Calendar.HOUR_OF_DAY);
+	if (hora >= 6 && hora < 12) {
+		out.println("Bom dia!!!");
+	} else if (hora >= 12 && hora < 18) {
+		out.println("Boa tarde!!!");
+	} else if (hora >= 18 && hora < 24) {
+		out.println("Boa noite!!!");
+	} else {
+		out.println("Boa madrugada!!!");
+	}
+	int mes = data.get(Calendar.MONTH) + 1;
+	switch(mes) {
+	case 1:
+		out.println("É Janeiro!");
+		break;
+	case 2:
+		out.println("É Fevereiro!");
+		break;
+	case 3:
+		out.println("É Março!");
+		break;
+	case 4:
+		out.println("É Abril!");
+		break;
+	case 5:
+		out.println("É Maio!");
+		break;
+	case 6:
+		out.println("É Junho!");
+		break;
+	case 7:
+		out.println("É Julho!");
+		break;
+	case 8:
+		out.println("É Agosto!");
+		break;
+	case 9:
+		out.println("É Setembro!");
+		break;
+	case 10:
+		out.println("É Outubro!");
+		break;
+	case 11:
+		out.println("É Novembro!");
+		break;
+	case 12:
+		out.println("É Dezembro!");
+		break;
+	}
 	%>
 	
 	<!-- Isso é um  comentário HTML -->
