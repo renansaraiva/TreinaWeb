@@ -22,6 +22,25 @@
 		out.println(mensagem);
 	%>
 	<p>A data atual é <%=getDataAtual() %></p>
+	
+	<%
+	String tabela = "";
+	tabela = "<table>";
+	for (int i = 0; i <= 10; i++) {
+		int resultado = 2 * i;
+		tabela += "<tr>";
+		tabela += "<td>";
+		tabela += "2 x " + i + " = ";
+		tabela += "</td>";
+		tabela += "<td>";
+		tabela += resultado;
+		tabela += "</td>";
+		tabela += "</tr>";
+	}
+	tabela += "</table>";
+	out.println(tabela);
+	%>
+	
 	<!-- Isso é um  comentário HTML -->
 </body>
 </html>
