@@ -7,6 +7,7 @@
 <title>Verificador de Idade</title>
 </head>
 <body>
+	<%@ include file = "menu.jsp" %>
 	<form action = "SvtVerificaIdade">
 		<table style = "border: 0px">
 			<tr>
@@ -15,7 +16,7 @@
 			</tr>
 			<tr>
 				<td>Idade: </td>
-				<td><input type = "text" name = "nome"/></td>
+				<td><input type = "text" name = "idade"/></td>
 			</tr>
 			<tr>
 				<td colspan = "2"><input type = "submit" name = "nome"/></td>

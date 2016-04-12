@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%@ include file = "menu.jsp" %>
 	<%!
 	// Método para pegar a data atual
 	public String getDataAtual() {

@@ -7,6 +7,7 @@
 <title>Vamos verificar a idade</title>
 </head>
 <body>
+<%@ include file = "menu.jsp" %>
 	<form method = "post" action = "LerIdade">
 		<table>
 			<tr>
