@@ -7,6 +7,7 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -49,6 +50,9 @@ public class ServletLogin extends HttpServlet {
 			Usuario usuario = UsuarioDAO.autenticar(nomeUsuario, senha);
 			if (usuario != null) {
 				contexto.setAttribute("usuarioLogado", usuario);
+				Cookie cookie = new Cookie("_nomeUsuarioConectado_", usuario.getNome());
+				cookie.setMaxAge(60 * 60);
+				response.addCookie(cookie);
 				response.sendRedirect("index.jsp");
 			} else {
 				response.sendRedirect("loginIncorreto.jsp");
